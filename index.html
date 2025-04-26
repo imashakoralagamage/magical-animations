@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Beautiful gradient background */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,7 +17,7 @@
       overflow: hidden;
       font-family: 'Poppins', sans-serif;
       position: relative;
-      background-color: #f2f2f2;
+      color: white;
     }
 
     /* Animated background with floating particles */
@@ -47,7 +47,7 @@
     /* Glowing text animation */
     h1 {
       font-size: 3.5rem;
-      color: #333;
+      color: #fff;
       animation: fadeInDown 2s ease-in-out, glow 1.5s ease-in-out infinite alternate;
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6);
     }
@@ -64,7 +64,6 @@
     /* Text fading and scaling effect */
     p {
       font-size: 1.4rem;
-      color: #555;
       margin-top: 20px;
       animation: fadeInUp 2s ease forwards, scaleUp 2s ease-in-out infinite alternate;
       animation-delay: 1s;
@@ -82,13 +81,13 @@
       }
     }
 
-    /* Button hover glow animation */
+    /* Colorful Button with hover effects */
     .magic-button {
       margin-top: 40px;
       padding: 14px 30px;
       font-size: 1.1rem;
-      background-color: #fff;
-      color: #333;
+      background-color: #ff6a00; /* Vibrant orange */
+      color: #fff;
       border: none;
       border-radius: 30px;
       cursor: pointer;
@@ -103,10 +102,10 @@
     }
 
     .magic-button:hover {
-      background-color: #96e6a1;
+      background-color: #ff8c00; /* Bright orange */
       color: white;
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(96, 230, 161, 0.8);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 138, 0, 0.8);
     }
 
     /* Animation Keyframes */
@@ -145,7 +144,7 @@
 <body>
 
   <h1>✨ Welcome to the Magic! ✨</h1>
-  <p>Experience the smoothest Webflow animations created with love.</p>
+  <p>Experience the smoothest Webflow animations with colorful magic!</p>
   <button class="magic-button">Discover More</button>
 
   <!-- Floating Particle Background -->
