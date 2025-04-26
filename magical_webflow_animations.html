@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magical Webflow Animations</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background: #fafafa;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 1s ease-in forwards;
+    }
+    @keyframes fadeInAnimation {
+      to { opacity: 1; }
+    }
+    .slide-in {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-in-out;
+    }
+    .slide-in.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .btn {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in" style="background:#f2f2f2; padding:20px; text-align:center;">
+    <h1>Welcome to Magical Animations</h1>
+  </header>
+
+  <div class="container">
+    <section class="slide-in" style="margin:100px 0;">
+      <h2>Scroll Animated Section</h2>
+      <p>This section slides in from the left as you scroll down to it.</p>
+    </section>
+
+    <section style="text-align:center; margin:100px 0;">
+      <button class="btn">Hover Over Me!</button>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const slideElements = document.querySelectorAll('.slide-in');
+      const observerOptions = { threshold: 0.1 };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      slideElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
