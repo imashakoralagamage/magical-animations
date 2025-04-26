@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Beautiful gradient background */
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* Blue and purple gradient */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -61,12 +61,21 @@
       }
     }
 
-    /* Text fading and scaling effect */
+    /* Subtitle and other text effects */
+    h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-top: 20px;
+      animation: fadeInUp 2s ease-in-out;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+
     p {
       font-size: 1.4rem;
       margin-top: 20px;
       animation: fadeInUp 2s ease forwards, scaleUp 2s ease-in-out infinite alternate;
-      animation-delay: 1s;
+      animation-delay: 2s;
       opacity: 0;
     }
 
@@ -86,7 +95,7 @@
       margin-top: 40px;
       padding: 14px 30px;
       font-size: 1.1rem;
-      background-color: #ff6a00; /* Vibrant orange */
+      background-color: #ff4b5c; /* Pinkish red */
       color: #fff;
       border: none;
       border-radius: 30px;
@@ -94,7 +103,7 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
       animation: fadeIn 2s ease forwards;
-      animation-delay: 2s;
+      animation-delay: 3s;
       opacity: 0;
       text-transform: uppercase;
       font-weight: bold;
@@ -102,10 +111,10 @@
     }
 
     .magic-button:hover {
-      background-color: #ff8c00; /* Bright orange */
+      background-color: #ff6a8f; /* Lighter pink */
       color: white;
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 138, 0, 0.8);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 76, 92, 0.8);
     }
 
     /* Animation Keyframes */
@@ -144,7 +153,9 @@
 <body>
 
   <h1>✨ Welcome to the Magic! ✨</h1>
-  <p>Experience the smoothest Webflow animations with colorful magic!</p>
+  <h2>Feel the Smooth Animations That Bring Life to Your Web Experience</h2>
+  <p>Experience the smoothest Webflow animations with colorful magic and dazzling effects. This page is just a preview of what can be done with some creativity!</p>
+  <p>Get ready to unlock even more features and design possibilities with Webflow. The magic never stops here!</p>
   <button class="magic-button">Discover More</button>
 
   <!-- Floating Particle Background -->
